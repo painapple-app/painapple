@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painapple — Pain tracker</title>
+  <meta name="description" content="The privacy-focused migraine, headache and pain tracker. Completely offline. No accounts. Your data stays on your device.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .logo {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 0.75rem;
+      animation: drop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+
+    @keyframes drop {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      animation: rise 0.5s 0.1s ease both;
+    }
+
+    .tagline {
+      margin-top: 0.75rem;
+      color: var(--muted);
+      font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+      max-width: 34ch;
+      animation: rise 0.5s 0.2s ease both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .divider {
+      width: 2rem;
+      height: 1px;
+      background: var(--border);
+      margin: 2rem auto;
+      animation: rise 0.5s 0.3s ease both;
+    }
+
+    .store-link {
+      display: inline-block;
+      animation: rise 0.5s 0.35s ease both;
+    }
+
+    .store-link img {
+      height: 52px;
+      display: block;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .store-link:hover img {
+      transform: translateY(-2px);
+      opacity: 0.85;
+    }
+
+    .store-link:hover {
+      text-decoration: none;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      animation: rise 0.5s 0.5s ease both;
+    }
+
+    footer a {
+      color: var(--muted);
+    }
+
+    footer a:hover {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+
+  <img class="logo" src="logo.svg" alt="Painapple logo">
+
+  <h1>Painapple</h1>
+  <p class="tagline">The privacy-focused migraine, headache and pain tracker</p>
+
+  <div class="divider"></div>
+
+  <a class="store-link" href="https://play.google.com/store/apps/details?id=com.painapple.painapple" target="_blank" rel="noopener">
+    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+  </a>
+
+  <footer>
+    <a href="privacy/">Privacy policy</a>
+  </footer>
+
+</body>
+</html>
